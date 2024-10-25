@@ -59,6 +59,8 @@ export function jsonToDoc<Data>(
   const dataDict = serializer.fromPersistence(docDict[DATA_KEY]) as any;
   let doc: BaseNode;
 
+  console.log({ docType, dataDict });
+
   if (docType === ObjectType.DOCUMENT) {
     doc = new Document({
       text: dataDict.text,
